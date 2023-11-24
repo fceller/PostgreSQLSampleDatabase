@@ -21,9 +21,6 @@
          <index name="address_pkey" unique="true">
             <column ascending="true" name="id"/>
          </index>
-         <index name="unique_address_constraint" unique="true">
-            <column ascending="true" name="customerid"/>
-         </index>
       </table>
       <table name="articles" numRows="17730" remarks="Instance of a product with a size, color and price" schema="webshop" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('webshop.articles_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
