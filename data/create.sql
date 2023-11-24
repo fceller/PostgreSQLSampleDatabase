@@ -716,14 +716,6 @@ ALTER TABLE ONLY webshop.stock
 
 
 --
--- Name: address unique_address_constraint; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.address
-    ADD CONSTRAINT unique_address_constraint UNIQUE (customerid);
-
-
---
 -- Name: articles articles_colorid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
