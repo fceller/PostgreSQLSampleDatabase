@@ -160,7 +160,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="productid">productid</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="productid">productid</span></td>
 				 <td>int4</td>
 				 <td>10</td>
 				 <td title='nullable'>√</td>
@@ -172,6 +172,14 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="articles.productid references products.id via articles_products_fkey">
+						<a href='products.html'>products</a><span class='relatedKey'>.id</span>
+					</td>
+					<td class="constraint detail">
+						articles_products_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+					</td>
+				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
@@ -432,21 +440,24 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="200,143,579,593">
-<area shape="rect" id="node2" href="colors.html" title="colors" alt="" coords="5,233,156,351">
-<area shape="rect" id="node3" href="order_positions.html" title="order_positions" alt="" coords="623,5,839,181">
-<area shape="rect" id="node4" href="stock.html" title="stock" alt="" coords="644,199,817,345">
+<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="235,143,613,593">
+<area shape="rect" id="node2" href="colors.html" title="colors" alt="" coords="23,287,173,404">
+<area shape="rect" id="node3" href="products.html" title="products" alt="" coords="5,123,191,269">
+<area shape="rect" id="node4" href="order_positions.html" title="order_positions" alt="" coords="657,5,873,181">
+<area shape="rect" id="node5" href="stock.html" title="stock" alt="" coords="679,199,852,345">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/articles.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="200,184,579,635">
-<area shape="rect" id="node2" href="colors.html" title="colors" alt="" coords="5,275,156,392">
-<area shape="rect" id="node3" href="order_positions.html" title="order_positions" alt="" coords="623,5,839,181">
-<area shape="rect" id="node4" href="order.html" title="order" alt="" coords="299,37,479,125">
-<area shape="rect" id="node5" href="stock.html" title="stock" alt="" coords="644,199,817,345">
+<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="443,184,821,635">
+<area shape="rect" id="node2" href="colors.html" title="colors" alt="" coords="231,327,381,444">
+<area shape="rect" id="node3" href="products.html" title="products" alt="" coords="213,163,399,309">
+<area shape="rect" id="node6" href="labels.html" title="labels" alt="" coords="5,195,169,283">
+<area shape="rect" id="node4" href="order_positions.html" title="order_positions" alt="" coords="865,5,1081,181">
+<area shape="rect" id="node5" href="order.html" title="order" alt="" coords="542,37,722,125">
+<area shape="rect" id="node7" href="stock.html" title="stock" alt="" coords="887,199,1060,345">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/articles.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

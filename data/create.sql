@@ -716,11 +716,35 @@ ALTER TABLE ONLY webshop.stock
 
 
 --
+-- Name: address unique_address_constraint; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.address
+    ADD CONSTRAINT unique_address_constraint UNIQUE (customerid);
+
+
+--
 -- Name: articles articles_colorid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop.articles
     ADD CONSTRAINT articles_colorid_fkey FOREIGN KEY (colorid) REFERENCES webshop.colors(id);
+
+
+--
+-- Name: articles articles_products_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.articles
+    ADD CONSTRAINT articles_products_fkey FOREIGN KEY (productid) REFERENCES webshop.products(id);
+
+
+--
+-- Name: order order_customer_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop."order"
+    ADD CONSTRAINT order_customer_fkey FOREIGN KEY (customer) REFERENCES webshop.customer(id);
 
 
 --
@@ -745,6 +769,14 @@ ALTER TABLE ONLY webshop.order_positions
 
 ALTER TABLE ONLY webshop."order"
     ADD CONSTRAINT order_shippingaddressid_fkey FOREIGN KEY (shippingaddressid) REFERENCES webshop.address(id);
+
+
+--
+-- Name: products product_labels_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.products
+    ADD CONSTRAINT product_labels_fkey FOREIGN KEY (labelid) REFERENCES webshop.labels(id);
 
 
 --
