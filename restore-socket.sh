@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-./restore-common.sh "$1" -U postgres
+DATABASENAME=${1:-'mywebshop'}
+
+./restore-common.sh "$DATABASENAME" -U postgres

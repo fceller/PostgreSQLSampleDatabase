@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,63 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: stock; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.stock (
-    id integer NOT NULL,
-    articleid integer,
-    count integer,
-    created timestamp with time zone DEFAULT now(),
-    updated timestamp with time zone
-);
-
-
-ALTER TABLE webshop.stock OWNER TO postgres;
-
---
--- Name: TABLE stock; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.stock IS 'Amount of articles on stock';
-
-
---
--- Name: stock_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.stock_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.stock_id_seq OWNER TO postgres;
-
---
--- Name: stock_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.stock_id_seq OWNED BY webshop.stock.id;
-
-
---
--- Name: stock id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.stock ALTER COLUMN id SET DEFAULT nextval('webshop.stock_id_seq'::regclass);
-
 
 --
 -- Data for Name: stock; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -17813,22 +17759,6 @@ COPY webshop.stock (id, articleid, count, created, updated) FROM stdin;
 --
 
 SELECT pg_catalog.setval('webshop.stock_id_seq', 17730, true);
-
-
---
--- Name: stock stock_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.stock
-    ADD CONSTRAINT stock_pkey PRIMARY KEY (id);
-
-
---
--- Name: stock stock_articleid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.stock
-    ADD CONSTRAINT stock_articleid_fkey FOREIGN KEY (articleid) REFERENCES webshop.articles(id);
 
 
 --

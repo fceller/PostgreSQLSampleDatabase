@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,66 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: products; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.products (
-    id integer NOT NULL,
-    name text,
-    labelid integer,
-    category public.category,
-    gender public.gender,
-    currentlyactive boolean,
-    created timestamp with time zone DEFAULT now(),
-    updated timestamp with time zone
-);
-
-
-ALTER TABLE webshop.products OWNER TO postgres;
-
---
--- Name: TABLE products; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.products IS 'Groups articles (differing in sizes/color)';
-
-
---
--- Name: products_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.products_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.products_id_seq OWNER TO postgres;
-
---
--- Name: products_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.products_id_seq OWNED BY webshop.products.id;
-
-
---
--- Name: products id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.products ALTER COLUMN id SET DEFAULT nextval('webshop.products_id_seq'::regclass);
-
 
 --
 -- Data for Name: products; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -1086,22 +1029,6 @@ COPY webshop.products (id, name, labelid, category, gender, currentlyactive, cre
 --
 
 SELECT pg_catalog.setval('webshop.products_id_seq', 1049, true);
-
-
---
--- Name: products products_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.products
-    ADD CONSTRAINT products_pkey PRIMARY KEY (id);
-
-
---
--- Name: products products_labelid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.products
-    ADD CONSTRAINT products_labelid_fkey FOREIGN KEY (labelid) REFERENCES webshop.labels(id);
 
 
 --

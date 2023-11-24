@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,67 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: customer; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.customer (
-    id integer NOT NULL,
-    firstname text,
-    lastname text,
-    gender public.gender,
-    email text,
-    dateofbirth date,
-    currentaddressid integer,
-    created timestamp with time zone DEFAULT now(),
-    updated timestamp with time zone
-);
-
-
-ALTER TABLE webshop.customer OWNER TO postgres;
-
---
--- Name: TABLE customer; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.customer IS 'Basic customer data';
-
-
---
--- Name: customer_id_seq1; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.customer_id_seq1
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.customer_id_seq1 OWNER TO postgres;
-
---
--- Name: customer_id_seq1; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.customer_id_seq1 OWNED BY webshop.customer.id;
-
-
---
--- Name: customer id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.customer ALTER COLUMN id SET DEFAULT nextval('webshop.customer_id_seq1'::regclass);
-
 
 --
 -- Data for Name: customer; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -1087,14 +1029,6 @@ COPY webshop.customer (id, firstname, lastname, gender, email, dateofbirth, curr
 --
 
 SELECT pg_catalog.setval('webshop.customer_id_seq1', 1101, true);
-
-
---
--- Name: customer customer_pkey1; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.customer
-    ADD CONSTRAINT customer_pkey1 PRIMARY KEY (id);
 
 
 --

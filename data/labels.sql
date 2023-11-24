@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,62 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: labels; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.labels (
-    id integer NOT NULL,
-    name text,
-    slugname text,
-    icon bytea
-);
-
-
-ALTER TABLE webshop.labels OWNER TO postgres;
-
---
--- Name: TABLE labels; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.labels IS 'Brands / labels';
-
-
---
--- Name: labels_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.labels_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.labels_id_seq OWNER TO postgres;
-
---
--- Name: labels_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.labels_id_seq OWNED BY webshop.labels.id;
-
-
---
--- Name: labels id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.labels ALTER COLUMN id SET DEFAULT nextval('webshop.labels_id_seq'::regclass);
-
 
 --
 -- Data for Name: labels; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -1252,14 +1199,6 @@ COPY webshop.labels (id, name, slugname, icon) FROM stdin;
 --
 
 SELECT pg_catalog.setval('webshop.labels_id_seq', 1170, true);
-
-
---
--- Name: labels labels_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.labels
-    ADD CONSTRAINT labels_pkey PRIMARY KEY (id);
 
 
 --

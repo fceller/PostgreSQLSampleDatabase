@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,65 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: order_positions; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.order_positions (
-    id integer NOT NULL,
-    orderid integer,
-    articleid integer,
-    amount smallint,
-    price money,
-    created timestamp with time zone DEFAULT now(),
-    updated timestamp with time zone
-);
-
-
-ALTER TABLE webshop.order_positions OWNER TO postgres;
-
---
--- Name: TABLE order_positions; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.order_positions IS 'Articles that are contained in an order';
-
-
---
--- Name: order_positions_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.order_positions_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.order_positions_id_seq OWNER TO postgres;
-
---
--- Name: order_positions_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.order_positions_id_seq OWNED BY webshop.order_positions.id;
-
-
---
--- Name: order_positions id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.order_positions ALTER COLUMN id SET DEFAULT nextval('webshop.order_positions_id_seq'::regclass);
-
 
 --
 -- Data for Name: order_positions; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -6070,30 +6014,6 @@ COPY webshop.order_positions (id, orderid, articleid, amount, price, created, up
 --
 
 SELECT pg_catalog.setval('webshop.order_positions_id_seq', 5994, true);
-
-
---
--- Name: order_positions order_positions_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_pkey PRIMARY KEY (id);
-
-
---
--- Name: order_positions order_positions_articleid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_articleid_fkey FOREIGN KEY (articleid) REFERENCES webshop.articles(id);
-
-
---
--- Name: order_positions order_positions_orderid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_orderid_fkey FOREIGN KEY (orderid) REFERENCES webshop."order"(id);
 
 
 --

@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.5
--- Dumped by pg_dump version 10.5
+-- Dumped from database version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
+-- Dumped by pg_dump version 14.9 (Ubuntu 14.9-0ubuntu0.22.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -12,71 +12,9 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
-
-SET default_tablespace = '';
-
-SET default_with_oids = false;
-
---
--- Name: articles; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.articles (
-    id integer NOT NULL,
-    productid integer,
-    ean text,
-    colorid integer,
-    size integer,
-    description text,
-    originalprice money,
-    reducedprice money,
-    taxrate numeric,
-    discountinpercent integer,
-    currentlyactive boolean,
-    created timestamp with time zone DEFAULT now(),
-    updated timestamp with time zone
-);
-
-
-ALTER TABLE webshop.articles OWNER TO postgres;
-
---
--- Name: TABLE articles; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.articles IS 'Instance of a product with a size, color and price';
-
-
---
--- Name: articles_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.articles_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.articles_id_seq OWNER TO postgres;
-
---
--- Name: articles_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.articles_id_seq OWNED BY webshop.articles.id;
-
-
---
--- Name: articles id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.articles ALTER COLUMN id SET DEFAULT nextval('webshop.articles_id_seq'::regclass);
-
 
 --
 -- Data for Name: articles; Type: TABLE DATA; Schema: webshop; Owner: postgres
@@ -17821,22 +17759,6 @@ COPY webshop.articles (id, productid, ean, colorid, size, description, originalp
 --
 
 SELECT pg_catalog.setval('webshop.articles_id_seq', 18522, true);
-
-
---
--- Name: articles articles_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.articles
-    ADD CONSTRAINT articles_pkey PRIMARY KEY (id);
-
-
---
--- Name: articles articles_colorid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.articles
-    ADD CONSTRAINT articles_colorid_fkey FOREIGN KEY (colorid) REFERENCES webshop.colors(id);
 
 
 --
