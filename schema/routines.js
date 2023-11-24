@@ -17,11 +17,12 @@ $(document).ready(function() {
 	var activeObject;
     var table = $('#routine_table').DataTable( {
         lengthChange: false,
-		ordering: true,
+		bSort: true,
 		paging: config.pagination,
 		pageLength: 50,
 		autoWidth: true,
-		processing: true,
+		bDeferRender: true,
+		bProcessing: true,
 		order: [[ 0, "asc" ]],
         buttons: [
             {

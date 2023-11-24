@@ -2,7 +2,7 @@
 
 DATABASENAME=${1:-'mywebshop'}
 PASSWORD=${2:-'postgres'}
-SCHEMASPY_VERSION='6.2.4'
+SCHEMASPY_VERSION='6.0.0'
 
 echo "Running schemaspy for database $DATABASENAME"
 
