@@ -2,9 +2,9 @@ order_positions
 stock
 order
 articles
-products
+customer
 address
+products
 sizes
 labels
 colors
-customer

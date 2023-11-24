@@ -748,6 +748,14 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
+-- Name: customer customer_address_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.customer
+    ADD CONSTRAINT customer_address_fkey FOREIGN KEY (currentaddressid) REFERENCES webshop.address(id);
+
+
+--
 -- Name: order order_customer_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 

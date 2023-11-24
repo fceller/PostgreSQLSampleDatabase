@@ -1,9 +1,9 @@
-customer
 colors
 labels
 sizes
-address
 products
+address
+customer
 articles
 order
 stock

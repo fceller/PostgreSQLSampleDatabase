@@ -34,7 +34,7 @@ digraph "largeRelationshipsDiagram" {
       <TR><TD PORT="zip" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="76" HEIGHT="16">zip</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="created" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="76" HEIGHT="16">created</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="updated" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="76" HEIGHT="16">updated</TD></TR></TABLE></TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,000 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,000 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 &gt;</TD></TR>
     </TABLE>>
     URL="tables/address.html"
     tooltip="address"
@@ -83,10 +83,10 @@ digraph "largeRelationshipsDiagram" {
       <TR><TD PORT="gender" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">gender</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="email" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">email</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="dateofbirth" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">dateofbirth</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="currentaddressid" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">currentaddressid</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="currentaddressid" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="schema/images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">currentaddressid</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="created" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">created</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="updated" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="116" HEIGHT="16">updated</TD></TR></TABLE></TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,000 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,000 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 &gt;</TD></TR>
     </TABLE>>
     URL="tables/customer.html"
     tooltip="customer"
@@ -187,6 +187,7 @@ digraph "largeRelationshipsDiagram" {
   "articles":"colorid":w -> "colors":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "articles":"productid":w -> "products":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "articles":"size":w -> "sizes":"id":e [arrowhead=none dir=back arrowtail=crowodot];
+  "customer":"currentaddressid":w -> "address":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "order":"customer":w -> "customer":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "order":"shippingaddressid":w -> "address":"id":e [arrowhead=none dir=back arrowtail=crowodot];
   "order_positions":"articleid":w -> "articles":"id":e [arrowhead=none dir=back arrowtail=crowodot];
