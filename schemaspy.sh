@@ -1,39 +1,41 @@
 #!/usr/bin/env bash
 
 DATABASENAME=${1:-'mywebshop'}
-SCHEMASPY_VERSION='schemaspy-6.0.0.jar'
+PASSWORD=${2:-'postgres'}
+SCHEMASPY_VERSION='6.2.4'
 
 echo "Running schemaspy for database $DATABASENAME"
 
-RED='\033[0;31m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
+#RED='\033[0;31m'
+#BLUE='\033[0;34m'
+#NC='\033[0m' # No Color
 
 function checkForPostgresDriver {
     if [ ! -f ./postgresql.jar ]; then
         echo "${BLUE}Missing postgresql.jar, downloading…${NC}\n"
-        curl -o postgresql.jar https://jdbc.postgresql.org/download/postgresql-42.2.3.jar
+        curl -o postgresql.jar https://jdbc.postgresql.org/download/postgresql-42.2.27.jar
     fi
 }
 
 function checkForSchemaSpy {
-    if [ ! -f ./${SCHEMASPY_VERSION} ]; then
+    if [ ! -f ./schemaspy-${SCHEMASPY_VERSION}.jar ]; then
         echo "${BLUE}Missing ${SCHEMASPY_VERSION}, downloading…${NC}\n"
-        curl -L -o ${SCHEMASPY_VERSION} https://github.com/schemaspy/schemaspy/releases/download/v6.0.0/${SCHEMASPY_VERSION}
+        curl -L -o schemaspy-${SCHEMASPY_VERSION}.jar https://github.com/schemaspy/schemaspy/releases/download/v${SCHEMASPY_VERSION}/schemaspy-${SCHEMASPY_VERSION}.jar
     fi
 }
 
 function runSchemaSpy {
     LC_CTYPE="en_US.UTF-8"
 
-    java -jar ${SCHEMASPY_VERSION} \
+    java -jar schemaspy-${SCHEMASPY_VERSION}.jar \
         -t pgsql \
         -dp postgresql.jar \
-        -gv /usr/local/ \
+        -gv /usr/ \
         -renderer :cairo \
         -db ${DATABASENAME} \
         -host localhost:5432 \
         -u postgres \
+        -p ${PASSWORD} \
         -s webshop \
         -o schema
 }
