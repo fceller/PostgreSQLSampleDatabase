@@ -740,6 +740,14 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
+-- Name: articles articles_sizes_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.articles
+    ADD CONSTRAINT articles_sizes_fkey FOREIGN KEY (size) REFERENCES webshop.sizes(id);
+
+
+--
 -- Name: order order_customer_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 

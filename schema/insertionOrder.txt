@@ -1,10 +1,10 @@
 customer
 colors
 labels
+sizes
 address
 products
 articles
 order
 stock
 order_positions
-sizes
