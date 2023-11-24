@@ -64,6 +64,7 @@
       <table name="customer" numRows="1000" remarks="Basic customer data" schema="webshop" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('webshop.customer_id_seq1'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
             <child column="customerid" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" schema="webshop" table="address"/>
+            <child column="customer_id" foreignKey="customer_product_rating_customer_id_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="customer_product_rating"/>
             <child column="customer" foreignKey="order_customer_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="order"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="firstname" nullable="true" remarks="" size="2147483647" type="text"/>
@@ -79,6 +80,21 @@
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="customer_pkey1" unique="true">
             <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="customer_product_rating" numRows="0" remarks="" schema="webshop" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="customer_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="customer_product_rating_customer_id_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="customer"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="1" name="product_id" nullable="false" remarks="" size="10" type="int4">
+            <parent column="id" foreignKey="customer_product_rating_product_id_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="products"/>
+         </column>
+         <column autoUpdated="false" digits="0" id="2" name="rating" nullable="true" remarks="" size="10" type="int4"/>
+         <primaryKey column="customer_id" sequenceNumberInPK="1"/>
+         <primaryKey column="product_id" sequenceNumberInPK="2"/>
+         <index name="customer_product_rating_pkey" unique="true">
+            <column ascending="true" name="customer_id"/>
+            <column ascending="true" name="product_id"/>
          </index>
       </table>
       <table name="labels" numRows="1170" remarks="Brands / labels" schema="webshop" type="TABLE">
@@ -133,6 +149,7 @@
       <table name="products" numRows="1000" remarks="Groups articles (differing in sizes/color)" schema="webshop" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('webshop.products_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial">
             <child column="productid" foreignKey="articles_products_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="articles"/>
+            <child column="product_id" foreignKey="customer_product_rating_product_id_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="customer_product_rating"/>
          </column>
          <column autoUpdated="false" digits="0" id="1" name="name" nullable="true" remarks="" size="2147483647" type="text"/>
          <column autoUpdated="false" digits="0" id="2" name="labelid" nullable="true" remarks="" size="10" type="int4">

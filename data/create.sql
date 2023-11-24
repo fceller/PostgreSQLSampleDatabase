@@ -293,6 +293,19 @@ ALTER SEQUENCE webshop.customer_id_seq1 OWNED BY webshop.customer.id;
 
 
 --
+-- Name: customer_product_rating; Type: TABLE; Schema: webshop; Owner: postgres
+--
+
+CREATE TABLE webshop.customer_product_rating (
+    customer_id integer NOT NULL,
+    product_id integer NOT NULL,
+    rating integer
+);
+
+
+ALTER TABLE webshop.customer_product_rating OWNER TO postgres;
+
+--
 -- Name: labels; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
@@ -668,6 +681,14 @@ ALTER TABLE ONLY webshop.customer
 
 
 --
+-- Name: customer_product_rating customer_product_rating_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.customer_product_rating
+    ADD CONSTRAINT customer_product_rating_pkey PRIMARY KEY (customer_id, product_id);
+
+
+--
 -- Name: labels labels_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
@@ -745,6 +766,22 @@ ALTER TABLE ONLY webshop.articles
 
 ALTER TABLE ONLY webshop.customer
     ADD CONSTRAINT customer_address_fkey FOREIGN KEY (currentaddressid) REFERENCES webshop.address(id);
+
+
+--
+-- Name: customer_product_rating customer_product_rating_customer_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.customer_product_rating
+    ADD CONSTRAINT customer_product_rating_customer_id_fkey FOREIGN KEY (customer_id) REFERENCES webshop.customer(id);
+
+
+--
+-- Name: customer_product_rating customer_product_rating_product_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.customer_product_rating
+    ADD CONSTRAINT customer_product_rating_product_id_fkey FOREIGN KEY (product_id) REFERENCES webshop.products(id);
 
 
 --
