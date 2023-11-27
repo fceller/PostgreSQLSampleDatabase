@@ -102,10 +102,10 @@ CREATE TABLE public.public_table (
 ALTER TABLE public.public_table OWNER TO postgres;
 
 --
--- Name: address; Type: TABLE; Schema: webshop; Owner: postgres
+-- Name: addresses; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
-CREATE TABLE webshop.address (
+CREATE TABLE webshop.addresses (
     id integer NOT NULL,
     customer_id integer,
     firstname text,
@@ -119,20 +119,20 @@ CREATE TABLE webshop.address (
 );
 
 
-ALTER TABLE webshop.address OWNER TO postgres;
+ALTER TABLE webshop.addresses OWNER TO postgres;
 
 --
--- Name: TABLE address; Type: COMMENT; Schema: webshop; Owner: postgres
+-- Name: TABLE addresses; Type: COMMENT; Schema: webshop; Owner: postgres
 --
 
-COMMENT ON TABLE webshop.address IS 'Addresses for receipts and shipping';
+COMMENT ON TABLE webshop.addresses IS 'Addresses for receipts and shipping';
 
 
 --
--- Name: address_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
+-- Name: addresses_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
 --
 
-CREATE SEQUENCE webshop.address_id_seq
+CREATE SEQUENCE webshop.addresses_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -141,13 +141,13 @@ CREATE SEQUENCE webshop.address_id_seq
     CACHE 1;
 
 
-ALTER TABLE webshop.address_id_seq OWNER TO postgres;
+ALTER TABLE webshop.addresses_id_seq OWNER TO postgres;
 
 --
--- Name: address_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
+-- Name: addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
 --
 
-ALTER SEQUENCE webshop.address_id_seq OWNED BY webshop.address.id;
+ALTER SEQUENCE webshop.addresses_id_seq OWNED BY webshop.addresses.id;
 
 
 --
@@ -244,17 +244,17 @@ ALTER SEQUENCE webshop.brands_id_seq OWNED BY webshop.brands.id;
 
 
 --
--- Name: cloth; Type: TABLE; Schema: webshop; Owner: postgres
+-- Name: clothes; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
-CREATE TABLE webshop.cloth (
+CREATE TABLE webshop.clothes (
     id integer NOT NULL,
     brand text,
     color_id integer
 );
 
 
-ALTER TABLE webshop.cloth OWNER TO postgres;
+ALTER TABLE webshop.clothes OWNER TO postgres;
 
 --
 -- Name: colors; Type: TABLE; Schema: webshop; Owner: postgres
@@ -299,10 +299,10 @@ ALTER SEQUENCE webshop.colors_id_seq OWNED BY webshop.colors.id;
 
 
 --
--- Name: customer; Type: TABLE; Schema: webshop; Owner: postgres
+-- Name: customers; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
-CREATE TABLE webshop.customer (
+CREATE TABLE webshop.customers (
     id integer NOT NULL,
     firstname text,
     lastname text,
@@ -315,13 +315,13 @@ CREATE TABLE webshop.customer (
 );
 
 
-ALTER TABLE webshop.customer OWNER TO postgres;
+ALTER TABLE webshop.customers OWNER TO postgres;
 
 --
--- Name: TABLE customer; Type: COMMENT; Schema: webshop; Owner: postgres
+-- Name: TABLE customers; Type: COMMENT; Schema: webshop; Owner: postgres
 --
 
-COMMENT ON TABLE webshop.customer IS 'Basic customer data';
+COMMENT ON TABLE webshop.customers IS 'Basic customer data';
 
 
 --
@@ -343,7 +343,7 @@ ALTER TABLE webshop.customer_id_seq1 OWNER TO postgres;
 -- Name: customer_id_seq1; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
 --
 
-ALTER SEQUENCE webshop.customer_id_seq1 OWNED BY webshop.customer.id;
+ALTER SEQUENCE webshop.customer_id_seq1 OWNED BY webshop.customers.id;
 
 
 --
@@ -360,10 +360,10 @@ CREATE TABLE webshop.customer_product_rating (
 ALTER TABLE webshop.customer_product_rating OWNER TO postgres;
 
 --
--- Name: order; Type: TABLE; Schema: webshop; Owner: postgres
+-- Name: orders; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
-CREATE TABLE webshop."order" (
+CREATE TABLE webshop.orders (
     id integer NOT NULL,
     customer integer,
     order_timestamp timestamp with time zone DEFAULT now(),
@@ -375,13 +375,13 @@ CREATE TABLE webshop."order" (
 );
 
 
-ALTER TABLE webshop."order" OWNER TO postgres;
+ALTER TABLE webshop.orders OWNER TO postgres;
 
 --
--- Name: TABLE "order"; Type: COMMENT; Schema: webshop; Owner: postgres
+-- Name: TABLE orders; Type: COMMENT; Schema: webshop; Owner: postgres
 --
 
-COMMENT ON TABLE webshop."order" IS 'Metadata for an order, see order_positions as well';
+COMMENT ON TABLE webshop.orders IS 'Metadata for an order, see order_positions as well';
 
 
 --
@@ -403,7 +403,7 @@ ALTER TABLE webshop.order_id_seq OWNER TO postgres;
 -- Name: order_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
 --
 
-ALTER SEQUENCE webshop.order_id_seq OWNED BY webshop."order".id;
+ALTER SEQUENCE webshop.order_id_seq OWNED BY webshop.orders.id;
 
 
 --
@@ -546,10 +546,10 @@ ALTER SEQUENCE webshop.sizes_id_seq OWNED BY webshop.sizes.id;
 
 
 --
--- Name: stock; Type: TABLE; Schema: webshop; Owner: postgres
+-- Name: stocks; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
-CREATE TABLE webshop.stock (
+CREATE TABLE webshop.stocks (
     id integer NOT NULL,
     article_id integer,
     count integer,
@@ -558,20 +558,20 @@ CREATE TABLE webshop.stock (
 );
 
 
-ALTER TABLE webshop.stock OWNER TO postgres;
+ALTER TABLE webshop.stocks OWNER TO postgres;
 
 --
--- Name: TABLE stock; Type: COMMENT; Schema: webshop; Owner: postgres
+-- Name: TABLE stocks; Type: COMMENT; Schema: webshop; Owner: postgres
 --
 
-COMMENT ON TABLE webshop.stock IS 'Amount of articles on stock';
+COMMENT ON TABLE webshop.stocks IS 'Amount of articles on stock';
 
 
 --
--- Name: stock_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
+-- Name: stocks_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
 --
 
-CREATE SEQUENCE webshop.stock_id_seq
+CREATE SEQUENCE webshop.stocks_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -580,13 +580,13 @@ CREATE SEQUENCE webshop.stock_id_seq
     CACHE 1;
 
 
-ALTER TABLE webshop.stock_id_seq OWNER TO postgres;
+ALTER TABLE webshop.stocks_id_seq OWNER TO postgres;
 
 --
--- Name: stock_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
+-- Name: stocks_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
 --
 
-ALTER SEQUENCE webshop.stock_id_seq OWNED BY webshop.stock.id;
+ALTER SEQUENCE webshop.stocks_id_seq OWNED BY webshop.stocks.id;
 
 
 --
@@ -603,10 +603,10 @@ CREATE TABLE webshop.trousers (
 ALTER TABLE webshop.trousers OWNER TO postgres;
 
 --
--- Name: address id; Type: DEFAULT; Schema: webshop; Owner: postgres
+-- Name: addresses id; Type: DEFAULT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.address ALTER COLUMN id SET DEFAULT nextval('webshop.address_id_seq'::regclass);
+ALTER TABLE ONLY webshop.addresses ALTER COLUMN id SET DEFAULT nextval('webshop.addresses_id_seq'::regclass);
 
 
 --
@@ -631,17 +631,10 @@ ALTER TABLE ONLY webshop.colors ALTER COLUMN id SET DEFAULT nextval('webshop.col
 
 
 --
--- Name: customer id; Type: DEFAULT; Schema: webshop; Owner: postgres
+-- Name: customers id; Type: DEFAULT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.customer ALTER COLUMN id SET DEFAULT nextval('webshop.customer_id_seq1'::regclass);
-
-
---
--- Name: order id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop."order" ALTER COLUMN id SET DEFAULT nextval('webshop.order_id_seq'::regclass);
+ALTER TABLE ONLY webshop.customers ALTER COLUMN id SET DEFAULT nextval('webshop.customer_id_seq1'::regclass);
 
 
 --
@@ -649,6 +642,13 @@ ALTER TABLE ONLY webshop."order" ALTER COLUMN id SET DEFAULT nextval('webshop.or
 --
 
 ALTER TABLE ONLY webshop.order_positions ALTER COLUMN id SET DEFAULT nextval('webshop.order_positions_id_seq'::regclass);
+
+
+--
+-- Name: orders id; Type: DEFAULT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.orders ALTER COLUMN id SET DEFAULT nextval('webshop.order_id_seq'::regclass);
 
 
 --
@@ -666,17 +666,17 @@ ALTER TABLE ONLY webshop.sizes ALTER COLUMN id SET DEFAULT nextval('webshop.size
 
 
 --
--- Name: stock id; Type: DEFAULT; Schema: webshop; Owner: postgres
+-- Name: stocks id; Type: DEFAULT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.stock ALTER COLUMN id SET DEFAULT nextval('webshop.stock_id_seq'::regclass);
+ALTER TABLE ONLY webshop.stocks ALTER COLUMN id SET DEFAULT nextval('webshop.stocks_id_seq'::regclass);
 
 
 --
--- Name: address address_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: addresses address_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.address
+ALTER TABLE ONLY webshop.addresses
     ADD CONSTRAINT address_pkey PRIMARY KEY (id);
 
 
@@ -697,10 +697,10 @@ ALTER TABLE ONLY webshop.brands
 
 
 --
--- Name: cloth cloth_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: clothes cloth_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.cloth
+ALTER TABLE ONLY webshop.clothes
     ADD CONSTRAINT cloth_pkey PRIMARY KEY (id);
 
 
@@ -713,10 +713,10 @@ ALTER TABLE ONLY webshop.colors
 
 
 --
--- Name: customer customer_pkey1; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: customers customer_pkey1; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.customer
+ALTER TABLE ONLY webshop.customers
     ADD CONSTRAINT customer_pkey1 PRIMARY KEY (id);
 
 
@@ -729,10 +729,10 @@ ALTER TABLE ONLY webshop.customer_product_rating
 
 
 --
--- Name: order order_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: orders order_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop."order"
+ALTER TABLE ONLY webshop.orders
     ADD CONSTRAINT order_pkey PRIMARY KEY (id);
 
 
@@ -761,10 +761,10 @@ ALTER TABLE ONLY webshop.sizes
 
 
 --
--- Name: stock stock_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: stocks stock_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.stock
+ALTER TABLE ONLY webshop.stocks
     ADD CONSTRAINT stock_pkey PRIMARY KEY (id);
 
 
@@ -785,19 +785,19 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
--- Name: cloth cloth_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: clothes cloth_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.cloth
+ALTER TABLE ONLY webshop.clothes
     ADD CONSTRAINT cloth_id_fkey FOREIGN KEY (id) REFERENCES webshop.articles(id);
 
 
 --
--- Name: customer customer_address_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: customers customer_address_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.customer
-    ADD CONSTRAINT customer_address_fkey FOREIGN KEY (current_address_id) REFERENCES webshop.address(id);
+ALTER TABLE ONLY webshop.customers
+    ADD CONSTRAINT customer_address_fkey FOREIGN KEY (current_address_id) REFERENCES webshop.addresses(id);
 
 
 --
@@ -805,7 +805,7 @@ ALTER TABLE ONLY webshop.customer
 --
 
 ALTER TABLE ONLY webshop.customer_product_rating
-    ADD CONSTRAINT customer_product_rating_customer_id_fkey FOREIGN KEY (customer_id) REFERENCES webshop.customer(id);
+    ADD CONSTRAINT customer_product_rating_customer_id_fkey FOREIGN KEY (customer_id) REFERENCES webshop.customers(id);
 
 
 --
@@ -817,11 +817,11 @@ ALTER TABLE ONLY webshop.customer_product_rating
 
 
 --
--- Name: order order_customer_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: orders order_customer_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop."order"
-    ADD CONSTRAINT order_customer_fkey FOREIGN KEY (customer) REFERENCES webshop.customer(id);
+ALTER TABLE ONLY webshop.orders
+    ADD CONSTRAINT order_customer_fkey FOREIGN KEY (customer) REFERENCES webshop.customers(id);
 
 
 --
@@ -837,15 +837,15 @@ ALTER TABLE ONLY webshop.order_positions
 --
 
 ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_order_id_fkey FOREIGN KEY (order_id) REFERENCES webshop."order"(id);
+    ADD CONSTRAINT order_positions_order_id_fkey FOREIGN KEY (order_id) REFERENCES webshop.orders(id);
 
 
 --
--- Name: order order_shipping_address_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: orders order_shipping_address_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop."order"
-    ADD CONSTRAINT order_shipping_address_id_fkey FOREIGN KEY (shipping_address_id) REFERENCES webshop.address(id);
+ALTER TABLE ONLY webshop.orders
+    ADD CONSTRAINT order_shipping_address_id_fkey FOREIGN KEY (shipping_address_id) REFERENCES webshop.addresses(id);
 
 
 --
@@ -857,10 +857,10 @@ ALTER TABLE ONLY webshop.products
 
 
 --
--- Name: stock stock_article_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: stocks stock_article_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.stock
+ALTER TABLE ONLY webshop.stocks
     ADD CONSTRAINT stock_article_id_fkey FOREIGN KEY (article_id) REFERENCES webshop.articles(id);
 
 
