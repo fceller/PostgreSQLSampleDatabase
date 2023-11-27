@@ -107,7 +107,7 @@ ALTER TABLE public.public_table OWNER TO postgres;
 
 CREATE TABLE webshop.address (
     id integer NOT NULL,
-    customerid integer,
+    customer_id integer,
     firstname text,
     lastname text,
     address_line_1 text,
@@ -265,8 +265,8 @@ CREATE TABLE webshop.customer (
     lastname text,
     gender public.gender,
     email text,
-    dateofbirth date,
-    currentaddressid integer,
+    data_of_birth date,
+    current_address_id integer,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone
 );
@@ -412,7 +412,7 @@ ALTER SEQUENCE webshop.order_id_seq OWNED BY webshop."order".id;
 
 CREATE TABLE webshop.order_positions (
     id integer NOT NULL,
-    orderid integer,
+    order_id integer,
     article_id integer,
     amount smallint,
     price money,
@@ -797,7 +797,7 @@ ALTER TABLE ONLY webshop.cloth
 --
 
 ALTER TABLE ONLY webshop.customer
-    ADD CONSTRAINT customer_address_fkey FOREIGN KEY (currentaddressid) REFERENCES webshop.address(id);
+    ADD CONSTRAINT customer_address_fkey FOREIGN KEY (current_address_id) REFERENCES webshop.address(id);
 
 
 --
@@ -833,11 +833,11 @@ ALTER TABLE ONLY webshop.order_positions
 
 
 --
--- Name: order_positions order_positions_orderid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: order_positions order_positions_order_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_orderid_fkey FOREIGN KEY (orderid) REFERENCES webshop."order"(id);
+    ADD CONSTRAINT order_positions_order_id_fkey FOREIGN KEY (order_id) REFERENCES webshop."order"(id);
 
 
 --

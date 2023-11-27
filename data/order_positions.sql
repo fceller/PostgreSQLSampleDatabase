@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: order_positions; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.order_positions (id, orderid, article_id, amount, price, created, updated) FROM stdin;
+COPY webshop.order_positions (id, order_id, article_id, amount, price, created, updated) FROM stdin;
 10	11	7364	1	$52.92	2018-08-02 15:30:40.686986+02	\N
 11	11	17820	1	$59.00	2018-08-02 15:30:40.686986+02	\N
 12	11	18212	1	$118.80	2018-08-02 15:30:40.686986+02	\N

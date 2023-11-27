@@ -7,7 +7,7 @@ stock
 cloth
 order
 articles
-customer
-address
 products
+customer
 labels
+address

@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: address; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.address (id, customerid, firstname, lastname, address_line_1, address_line_2, city, zip, created, updated) FROM stdin;
+COPY webshop.address (id, customer_id, firstname, lastname, address_line_1, address_line_2, city, zip, created, updated) FROM stdin;
 1108	108	\N	\N	5718 Rue Jean-Baldassini	\N	Eriswil	9937	2018-08-02 13:52:31.805549+02	\N
 1109	109	\N	\N	2276 Rue Abel-Hovelacque	\N	Buchs (Ag)	5576	2018-08-02 13:52:31.805549+02	\N
 1110	110	\N	\N	3646 Daisy Dr	\N	Arvada	98683	2018-08-02 13:52:31.805549+02	\N
