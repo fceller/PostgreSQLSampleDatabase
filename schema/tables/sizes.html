@@ -135,14 +135,6 @@
 				 <td>nextval(&#39;webshop.sizes_id_seq&#39;::regclass)</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td title="articles.size references sizes.id via articles_sizes_fkey">
-						<a href='articles.html'>articles</a><span class='relatedKey'>.size</span>
-					</td>
-					<td class="constraint detail">
-						articles_sizes_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
-					</td>
-				   </tr>
 				  </table>				 
 				 </td>
 				 <td>
@@ -290,51 +282,6 @@
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
-		</div>
-				<div class="box box-primary">		
-			<div class="box-header with-border">
-              <i class="fa fa-code-fork"></i>
-
-              <h3 id="Relationships" class="box-title">Relationships</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>	
-			<div class="box-body">	
-			<div class="nav-tabs-custom" style="cursor: move;">
-            <!-- Tabs within a box -->
-			<h5>Close relationships within degrees of separation</h5>
-            <ul class="nav nav-tabs pull-left ui-sortable-handle">
-			  			              <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>			  			 
-			  			              <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>			  			 
-            </ul>
-            <div class="tab-content no-padding">            
-				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
-					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="364,5,576,211">
-<area shape="rect" id="node2" href="sizes.html" title="sizes" alt="" coords="5,91,320,365">
-</map>
-
-					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/sizes.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
-				</div>
-				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
-					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="364,55,576,260">
-<area shape="rect" id="node2" href="colors.html" title="colors" alt="" coords="87,116,238,204">
-<area shape="rect" id="node3" href="products.html" title="products" alt="" coords="73,11,253,99">
-<area shape="rect" id="node4" href="sizes.html" title="sizes" alt="" coords="5,221,320,496">
-<area shape="rect" id="node5" href="order_positions.html" title="order_positions" alt="" coords="620,5,836,93">
-<area shape="rect" id="node6" href="stock.html" title="stock" alt="" coords="641,111,815,199">
-</map>
-
-					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/sizes.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
-				</div>
-			  			</div>
-			</div>
-		  </div><!-- /.box-body -->
 		</div>
 	      </section>
     

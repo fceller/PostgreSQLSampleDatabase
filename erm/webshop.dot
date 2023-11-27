@@ -1,0 +1,36 @@
+idigraph ERDiagram {
+    // Set graph layout options
+    graph [overlap=false, splines=true]
+
+    // Define node shapes
+    node [shape=record, style=filled, fillcolor=grey95]
+
+    // Define nodes with attributes
+    Customer [label="{Customer|+ CustomerID\l+ Name\l+ Email\l+ Password\l+ Address\l+ Phone Number\l}"];
+    Product [label="{Product|+ ProductID\l+ Name\l+ Description\l+ Price\l+ StockQuantity\l+ CategoryID\l}"];
+    Category [label="{Category|+ CategoryID\l+ Name\l+ Description\l}"];
+    Order [label="{Order|+ OrderID\l+ Date\l+ CustomerID\l+ TotalAmount\l+ Status\l}"];
+    OrderDetails [label="{OrderDetails|+ OrderID\l+ ProductID\l+ Quantity\l+ UnitPrice\l}"];
+    Review [label="{Review|+ ReviewID\l+ ProductID\l+ CustomerID\l+ Rating\l+ Comment\l+ Date\l}"];
+    Recommendation [label="{Recommendation|+ RecommendationID\l+ ProductID\l+ AlgorithmType\l+ Date\l}"];
+    Cart [label="{Cart|+ CartID\l+ CustomerID\l+ DateModified\l}"];
+    CartItem [label="{CartItem|+ CartID\l+ ProductID\l+ Quantity\l}"];
+
+    // Define relationships with cardinality
+    Customer -> Order [label="places"];
+    Order -> OrderDetails [label="contains"];
+    OrderDetails -> Product [label="includes"];
+    Product -> Category [label="belongs to"];
+    Customer -> Review [label="writes"];
+    Review -> Product [label="reviews"];
+    Product -> Recommendation [label="has recommendations for"];
+    Customer -> Cart [label="has", dir=none]; // dir=none for one-to-one relationships
+    Cart -> CartItem [label="contains"];
+    CartItem -> Product [label="includes"];
+
+    // For many-to-many relationships, a junction table is usually created, represented here as invisible edges
+    Product -> OrderDetails [style=invis];
+    OrderDetails -> Order [style=invis];
+    CartItem -> Cart [style=invis];
+}
+

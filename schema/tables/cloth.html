@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>order_positions - mywebshop Database</title>
+  <title>cloth - mywebshop Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -76,23 +76,7 @@
   <div class="content-wrapper">
           <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1>order_positions</h1></br>
-		<div class="box box-primary">
-            <div class="box-header with-border">
-              <i class="fa fa-file-text-o"></i>
-              <h3 id="Description" class="box-title">Description</h3>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>			  
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body clearfix">
-				<p><p>Articles that are contained in an order</p></p>              
-            </div>
-            <!-- /.box-body -->
-		</div>
+        <h1>cloth</h1></br>
 		      </section>
       <!-- Main content -->
       <section class="content">
@@ -128,26 +112,9 @@
 				<tbody>
 				<tr>
 				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-				 <td>serial</td>
-				 <td>10</td>
-				 <td title=''></td>
-				 <td title='Automatically updated by the database'>√</td>
-				 <td>nextval(&#39;webshop.order_positions_id_seq&#39;::regclass)</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="orderid">orderid</span></td>
 				 <td>int4</td>
 				 <td>10</td>
-				 <td title='nullable'>√</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td>
@@ -157,36 +124,11 @@
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
-					<td title="order_positions.orderid references order.id via order_positions_orderid_fkey">
-						<a href='order.html'>order</a><span class='relatedKey'>.id</span>
-					</td>
-					<td class="constraint detail">
-						order_positions_orderid_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
-					</td>
-				   </tr>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="articleid">articleid</span></td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td title="order_positions.articleid references articles.id via order_positions_articleid_fkey">
+					<td title="cloth.id references articles.id via cloth_id_fkey">
 						<a href='articles.html'>articles</a><span class='relatedKey'>.id</span>
 					</td>
 					<td class="constraint detail">
-						order_positions_articleid_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+						cloth_id_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
 					</td>
 				   </tr>
 				  </table>					 
@@ -194,25 +136,8 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="amount">amount</span></td>
-				 <td>int2</td>
-				 <td>5</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="price">price</span></td>
-				 <td>money</td>
+				 <td><span id="brand">brand</span></td>
+				 <td>text</td>
 				 <td>2147483647</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
@@ -228,26 +153,9 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="created">created</span></td>
-				 <td>timestamptz</td>
-				 <td>35,6</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>now()</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="updated">updated</span></td>
-				 <td>timestamptz</td>
-				 <td>35,6</td>
+				 <td><span id="color_id">color_id</span></td>
+				 <td>int4</td>
+				 <td>10</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -263,7 +171,7 @@
 				</tr>
 								</tbody>
 				</table>
-				<p title='7 columns'>Table contained <span id="recordNumber">5985</span> rows<p/>
+				<p title='3 columns'>Table contained <span id="recordNumber">0</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -290,7 +198,7 @@
 				</thead>
 				<tbody>
 				 <tr>
-				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> order_positions_pkey</td>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> cloth_pkey</td>
 				  <td>Primary key</td>
 				  <td><span title='Ascending'>Asc</span></td>
 				  <td>id</td>
@@ -322,27 +230,23 @@
             <div class="tab-content no-padding">            
 				<div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="order_positions.html" title="order_positions" alt="" coords="264,56,619,331">
-<area shape="rect" id="node2" href="articles.html" title="articles" alt="" coords="7,199,219,345">
-<area shape="rect" id="node3" href="order.html" title="order" alt="" coords="5,5,220,181">
+<area shape="rect" id="node1" href="cloth.html" title="cloth" alt="" coords="261,5,527,163">
+<area shape="rect" id="node2" href="articles.html" title="articles" alt="" coords="5,8,217,155">
 </map>
 
-					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/order_positions.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/cloth.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 				<div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">					
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="439,149,651,296">
-<area shape="rect" id="node2" href="products.html" title="products" alt="" coords="213,181,393,269">
-<area shape="rect" id="node3" href="cloth.html" title="cloth" alt="" coords="807,5,939,93">
-<area shape="rect" id="node4" href="customer.html" title="customer" alt="" coords="213,365,393,453">
-<area shape="rect" id="node5" href="address.html" title="address" alt="" coords="5,400,169,488">
-<area shape="rect" id="node6" href="order.html" title="order" alt="" coords="437,353,652,529">
-<area shape="rect" id="node7" href="order_positions.html" title="order_positions" alt="" coords="696,321,1051,596">
-<area shape="rect" id="node8" href="stock.html" title="stock" alt="" coords="787,111,960,199">
-<area shape="rect" id="node9" href="trousers.html" title="trousers" alt="" coords="794,216,953,304">
+<area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="229,231,441,377">
+<area shape="rect" id="node2" href="products.html" title="products" alt="" coords="5,263,185,351">
+<area shape="rect" id="node3" href="cloth.html" title="cloth" alt="" coords="485,5,751,163">
+<area shape="rect" id="node4" href="order_positions.html" title="order_positions" alt="" coords="510,180,726,268">
+<area shape="rect" id="node5" href="stock.html" title="stock" alt="" coords="531,285,705,373">
+<area shape="rect" id="node6" href="trousers.html" title="trousers" alt="" coords="539,391,697,479">
 </map>
 
-					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/order_positions.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
+					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/cloth.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
 				</div>
 			  			</div>
 			</div>

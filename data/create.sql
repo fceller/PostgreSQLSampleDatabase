@@ -158,8 +158,6 @@ CREATE TABLE webshop.articles (
     id integer NOT NULL,
     productid integer,
     ean text,
-    colorid integer,
-    size integer,
     description text,
     originalprice money,
     reducedprice money,
@@ -201,6 +199,19 @@ ALTER TABLE webshop.articles_id_seq OWNER TO postgres;
 
 ALTER SEQUENCE webshop.articles_id_seq OWNED BY webshop.articles.id;
 
+
+--
+-- Name: cloth; Type: TABLE; Schema: webshop; Owner: postgres
+--
+
+CREATE TABLE webshop.cloth (
+    id integer NOT NULL,
+    brand text,
+    color_id integer
+);
+
+
+ALTER TABLE webshop.cloth OWNER TO postgres;
 
 --
 -- Name: colors; Type: TABLE; Schema: webshop; Owner: postgres
@@ -579,6 +590,19 @@ ALTER SEQUENCE webshop.stock_id_seq OWNED BY webshop.stock.id;
 
 
 --
+-- Name: trousers; Type: TABLE; Schema: webshop; Owner: postgres
+--
+
+CREATE TABLE webshop.trousers (
+    id integer NOT NULL,
+    length integer,
+    waist_lenth integer
+);
+
+
+ALTER TABLE webshop.trousers OWNER TO postgres;
+
+--
 -- Name: address id; Type: DEFAULT; Schema: webshop; Owner: postgres
 --
 
@@ -665,6 +689,14 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
+-- Name: cloth cloth_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.cloth
+    ADD CONSTRAINT cloth_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: colors colors_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
@@ -737,11 +769,11 @@ ALTER TABLE ONLY webshop.stock
 
 
 --
--- Name: articles articles_colorid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: trousers trousers_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.articles
-    ADD CONSTRAINT articles_colorid_fkey FOREIGN KEY (colorid) REFERENCES webshop.colors(id);
+ALTER TABLE ONLY webshop.trousers
+    ADD CONSTRAINT trousers_pkey PRIMARY KEY (id);
 
 
 --
@@ -753,11 +785,11 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
--- Name: articles articles_sizes_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: cloth cloth_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
-ALTER TABLE ONLY webshop.articles
-    ADD CONSTRAINT articles_sizes_fkey FOREIGN KEY (size) REFERENCES webshop.sizes(id);
+ALTER TABLE ONLY webshop.cloth
+    ADD CONSTRAINT cloth_id_fkey FOREIGN KEY (id) REFERENCES webshop.articles(id);
 
 
 --
@@ -830,6 +862,14 @@ ALTER TABLE ONLY webshop.products
 
 ALTER TABLE ONLY webshop.stock
     ADD CONSTRAINT stock_articleid_fkey FOREIGN KEY (articleid) REFERENCES webshop.articles(id);
+
+
+--
+-- Name: trousers trousers_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.trousers
+    ADD CONSTRAINT trousers_id_fkey FOREIGN KEY (id) REFERENCES webshop.articles(id);
 
 
 --

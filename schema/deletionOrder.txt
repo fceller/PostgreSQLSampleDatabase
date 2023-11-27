@@ -1,11 +1,13 @@
+sizes
+colors
 order_positions
 customer_product_rating
+trousers
 stock
+cloth
 order
 articles
 customer
 address
 products
-sizes
 labels
-colors
