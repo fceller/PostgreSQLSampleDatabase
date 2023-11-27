@@ -194,7 +194,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="shipping_addressid">shipping_addressid</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="shipping_address_id">shipping_address_id</span></td>
 				 <td>int4</td>
 				 <td>10</td>
 				 <td title='nullable'>√</td>
@@ -207,11 +207,11 @@
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
-					<td title="order.shipping_addressid references address.id via order_shipping_addressid_fkey">
+					<td title="order.shipping_address_id references address.id via order_shipping_address_id_fkey">
 						<a href='address.html'>address</a><span class='relatedKey'>.id</span>
 					</td>
 					<td class="constraint detail">
-						order_shipping_addressid_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+						order_shipping_address_id_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
 					</td>
 				   </tr>
 				  </table>					 
@@ -236,7 +236,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="shippingcost">shippingcost</span></td>
+				 <td><span id="shipping_cost">shipping_cost</span></td>
 				 <td>money</td>
 				 <td>2147483647</td>
 				 <td title='nullable'>√</td>
@@ -349,8 +349,8 @@
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="customer.html" title="customer" alt="" coords="229,31,449,177">
 <area shape="rect" id="node2" href="address.html" title="address" alt="" coords="5,108,185,225">
-<area shape="rect" id="node3" href="order.html" title="order" alt="" coords="493,32,883,336">
-<area shape="rect" id="node4" href="order_positions.html" title="order_positions" alt="" coords="927,5,1143,181">
+<area shape="rect" id="node3" href="order.html" title="order" alt="" coords="493,32,891,336">
+<area shape="rect" id="node4" href="order_positions.html" title="order_positions" alt="" coords="935,5,1151,181">
 </map>
 
 					<a name='diagram'><img id='oneDegreeImg' src='../diagrams/order.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							
@@ -359,10 +359,10 @@
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="customer.html" title="customer" alt="" coords="229,77,449,224">
 <area shape="rect" id="node2" href="address.html" title="address" alt="" coords="5,155,185,272">
-<area shape="rect" id="node3" href="customer_product_rating.html" title="customer_product_rating" alt="" coords="541,5,835,93">
-<area shape="rect" id="node4" href="order.html" title="order" alt="" coords="493,111,883,415">
-<area shape="rect" id="node5" href="order_positions.html" title="order_positions" alt="" coords="927,228,1143,404">
-<area shape="rect" id="node6" href="articles.html" title="articles" alt="" coords="593,432,783,520">
+<area shape="rect" id="node3" href="customer_product_rating.html" title="customer_product_rating" alt="" coords="545,5,839,93">
+<area shape="rect" id="node4" href="order.html" title="order" alt="" coords="493,111,891,415">
+<area shape="rect" id="node5" href="order_positions.html" title="order_positions" alt="" coords="935,228,1151,404">
+<area shape="rect" id="node6" href="articles.html" title="articles" alt="" coords="597,432,787,520">
 </map>
 
 					<a name='diagram'><img id='twodegreesDegreeImg' src='../diagrams/order.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>							

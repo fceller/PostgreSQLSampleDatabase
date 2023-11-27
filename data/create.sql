@@ -367,9 +367,9 @@ CREATE TABLE webshop."order" (
     id integer NOT NULL,
     customer integer,
     order_timestamp timestamp with time zone DEFAULT now(),
-    shipping_addressid integer,
+    shipping_address_id integer,
     total money,
-    shippingcost money,
+    shipping_cost money,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone
 );
@@ -841,11 +841,11 @@ ALTER TABLE ONLY webshop.order_positions
 
 
 --
--- Name: order order_shipping_addressid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: order order_shipping_address_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop."order"
-    ADD CONSTRAINT order_shipping_addressid_fkey FOREIGN KEY (shipping_addressid) REFERENCES webshop.address(id);
+    ADD CONSTRAINT order_shipping_address_id_fkey FOREIGN KEY (shipping_address_id) REFERENCES webshop.address(id);
 
 
 --
