@@ -60,8 +60,7 @@
          <column autoUpdated="false" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="int4">
             <parent column="id" foreignKey="cloth_id_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="articles"/>
          </column>
-         <column autoUpdated="false" digits="0" id="1" name="brand" nullable="true" remarks="" size="2147483647" type="text"/>
-         <column autoUpdated="false" digits="0" id="2" name="color_id" nullable="true" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="0" id="1" name="color_id" nullable="true" remarks="" size="10" type="int4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="cloth_pkey" unique="true">
             <column ascending="true" name="id"/>
@@ -158,10 +157,9 @@
             <parent column="id" foreignKey="product_brands_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="brands"/>
          </column>
          <column autoUpdated="false" digits="0" id="3" name="category" nullable="true" remarks="" size="2147483647" type="category"/>
-         <column autoUpdated="false" digits="0" id="4" name="gender" nullable="true" remarks="" size="2147483647" type="gender"/>
-         <column autoUpdated="false" digits="0" id="5" name="is_active" nullable="true" remarks="" size="1" type="bool"/>
-         <column autoUpdated="false" defaultValue="now()" digits="6" id="6" name="created" nullable="true" remarks="" size="35" type="timestamptz"/>
-         <column autoUpdated="false" digits="6" id="7" name="updated" nullable="true" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="0" id="4" name="is_active" nullable="true" remarks="" size="1" type="bool"/>
+         <column autoUpdated="false" defaultValue="now()" digits="6" id="5" name="created" nullable="true" remarks="" size="35" type="timestamptz"/>
+         <column autoUpdated="false" digits="6" id="6" name="updated" nullable="true" remarks="" size="35" type="timestamptz"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="products_pkey" unique="true">
             <column ascending="true" name="id"/>
