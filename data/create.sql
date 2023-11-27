@@ -307,7 +307,7 @@ CREATE TABLE webshop.customers (
     lastname text,
     gender public.gender,
     email text,
-    data_of_birth date,
+    date_of_birth date,
     current_address_id integer,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone

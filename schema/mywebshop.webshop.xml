@@ -99,7 +99,7 @@
          <column autoUpdated="false" digits="0" id="2" name="lastname" nullable="true" remarks="" size="2147483647" type="text"/>
          <column autoUpdated="false" digits="0" id="3" name="gender" nullable="true" remarks="" size="2147483647" type="gender"/>
          <column autoUpdated="false" digits="0" id="4" name="email" nullable="true" remarks="" size="2147483647" type="text"/>
-         <column autoUpdated="false" digits="0" id="5" name="data_of_birth" nullable="true" remarks="" size="13" type="date"/>
+         <column autoUpdated="false" digits="0" id="5" name="date_of_birth" nullable="true" remarks="" size="13" type="date"/>
          <column autoUpdated="false" digits="0" id="6" name="current_address_id" nullable="true" remarks="" size="10" type="int4">
             <parent column="id" foreignKey="customer_address_fkey" implied="false" onDeleteCascade="false" schema="webshop" table="addresses"/>
          </column>

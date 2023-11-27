@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: customers; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.customers (id, firstname, lastname, gender, email, data_of_birth, current_address_id, created, updated) FROM stdin;
+COPY webshop.customers (id, firstname, lastname, gender, email, date_of_birth, current_address_id, created, updated) FROM stdin;
 127	Vera	Horton	female	vera.horton@example.com	1975-01-08	1127	2018-08-02 13:37:18.409411+02	\N
 128	Emilia	Halonen	female	emilia.halonen@example.com	1958-04-02	1128	2018-08-02 13:37:18.409411+02	\N
 129	Jimmie	Sanchez	male	jimmie.sanchez@example.com	1979-06-28	1129	2018-08-02 13:37:18.409411+02	\N
