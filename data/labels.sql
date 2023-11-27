@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: labels; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.labels (id, name, slugname, icon) FROM stdin;
+COPY webshop.labels (id, name, slug, icon) FROM stdin;
 1	A	A	\N
 2	A.F.C.A	AFCA	\N
 3	A.P.C.Absolut Joy	APCAbsolutJoy	\N

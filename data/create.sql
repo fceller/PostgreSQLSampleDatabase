@@ -110,8 +110,8 @@ CREATE TABLE webshop.address (
     customerid integer,
     firstname text,
     lastname text,
-    address1 text,
-    address2 text,
+    address_line_1 text,
+    address_line_2 text,
     city text,
     zip text,
     created timestamp with time zone DEFAULT now(),
@@ -156,14 +156,14 @@ ALTER SEQUENCE webshop.address_id_seq OWNED BY webshop.address.id;
 
 CREATE TABLE webshop.articles (
     id integer NOT NULL,
-    productid integer,
+    product_id integer,
     ean text,
     description text,
-    originalprice money,
-    reducedprice money,
+    original_price money,
+    reduced_price money,
     taxrate numeric,
-    discountinpercent integer,
-    currentlyactive boolean,
+    discount_percent integer,
+    is_active boolean,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone
 );
@@ -323,7 +323,7 @@ ALTER TABLE webshop.customer_product_rating OWNER TO postgres;
 CREATE TABLE webshop.labels (
     id integer NOT NULL,
     name text,
-    slugname text,
+    slug text,
     icon bytea
 );
 
@@ -366,8 +366,8 @@ ALTER SEQUENCE webshop.labels_id_seq OWNED BY webshop.labels.id;
 CREATE TABLE webshop."order" (
     id integer NOT NULL,
     customer integer,
-    ordertimestamp timestamp with time zone DEFAULT now(),
-    shippingaddressid integer,
+    order_timestamp timestamp with time zone DEFAULT now(),
+    shipping_addressid integer,
     total money,
     shippingcost money,
     created timestamp with time zone DEFAULT now(),
@@ -459,10 +459,10 @@ ALTER SEQUENCE webshop.order_positions_id_seq OWNED BY webshop.order_positions.i
 CREATE TABLE webshop.products (
     id integer NOT NULL,
     name text,
-    labelid integer,
+    label_id integer,
     category public.category,
     gender public.gender,
-    currentlyactive boolean,
+    is_active boolean,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone
 );
@@ -781,7 +781,7 @@ ALTER TABLE ONLY webshop.trousers
 --
 
 ALTER TABLE ONLY webshop.articles
-    ADD CONSTRAINT articles_products_fkey FOREIGN KEY (productid) REFERENCES webshop.products(id);
+    ADD CONSTRAINT articles_products_fkey FOREIGN KEY (product_id) REFERENCES webshop.products(id);
 
 
 --
@@ -841,11 +841,11 @@ ALTER TABLE ONLY webshop.order_positions
 
 
 --
--- Name: order order_shippingaddressid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: order order_shipping_addressid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop."order"
-    ADD CONSTRAINT order_shippingaddressid_fkey FOREIGN KEY (shippingaddressid) REFERENCES webshop.address(id);
+    ADD CONSTRAINT order_shipping_addressid_fkey FOREIGN KEY (shipping_addressid) REFERENCES webshop.address(id);
 
 
 --
@@ -853,7 +853,7 @@ ALTER TABLE ONLY webshop."order"
 --
 
 ALTER TABLE ONLY webshop.products
-    ADD CONSTRAINT product_labels_fkey FOREIGN KEY (labelid) REFERENCES webshop.labels(id);
+    ADD CONSTRAINT product_labels_fkey FOREIGN KEY (label_id) REFERENCES webshop.labels(id);
 
 
 --

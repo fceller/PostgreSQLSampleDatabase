@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: articles; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.articles (id, productid, ean, description, originalprice, reducedprice, taxrate, discountinpercent, currentlyactive, created, updated) FROM stdin;
+COPY webshop.articles (id, product_id, ean, description, original_price, reduced_price, taxrate, discount_percent, is_active, created, updated) FROM stdin;
 793	50	3373437	The stylish Costume Aminis just what you need right now!	$147.00	$119.07	19.0	19	t	2018-08-02 11:56:54.199683+02	\N
 794	50	56636496	The stylish Costume Aminis just what you need right now!	$147.00	$119.07	19.0	19	t	2018-08-02 11:56:54.199683+02	\N
 795	50	55032789	The stylish Costume Aminis just what you need right now!	$147.00	$119.07	19.0	19	t	2018-08-02 11:56:54.199683+02	\N
