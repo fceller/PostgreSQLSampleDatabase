@@ -413,7 +413,7 @@ ALTER SEQUENCE webshop.order_id_seq OWNED BY webshop."order".id;
 CREATE TABLE webshop.order_positions (
     id integer NOT NULL,
     orderid integer,
-    articleid integer,
+    article_id integer,
     amount smallint,
     price money,
     created timestamp with time zone DEFAULT now(),
@@ -551,7 +551,7 @@ ALTER SEQUENCE webshop.sizes_id_seq OWNED BY webshop.sizes.id;
 
 CREATE TABLE webshop.stock (
     id integer NOT NULL,
-    articleid integer,
+    article_id integer,
     count integer,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone
@@ -825,11 +825,11 @@ ALTER TABLE ONLY webshop."order"
 
 
 --
--- Name: order_positions order_positions_articleid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: order_positions order_positions_article_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop.order_positions
-    ADD CONSTRAINT order_positions_articleid_fkey FOREIGN KEY (articleid) REFERENCES webshop.articles(id);
+    ADD CONSTRAINT order_positions_article_id_fkey FOREIGN KEY (article_id) REFERENCES webshop.articles(id);
 
 
 --
@@ -857,11 +857,11 @@ ALTER TABLE ONLY webshop.products
 
 
 --
--- Name: stock stock_articleid_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: stock stock_article_id_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop.stock
-    ADD CONSTRAINT stock_articleid_fkey FOREIGN KEY (articleid) REFERENCES webshop.articles(id);
+    ADD CONSTRAINT stock_article_id_fkey FOREIGN KEY (article_id) REFERENCES webshop.articles(id);
 
 
 --

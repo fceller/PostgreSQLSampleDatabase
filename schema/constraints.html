@@ -124,12 +124,12 @@
 				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
 				</tr>
 				<tr>
-				 <td>stock_articleid_fkey</td>
+				 <td>stock_article_id_fkey</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/stock.html'>stock</a><span>.articleid</span>
+						<a href='tables/stock.html'>stock</a><span>.article_id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -139,6 +139,28 @@
 				   <tr>
 					<td>
 						<a href='tables/articles.html'>articles</a><span>.id</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>	
+				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+				</tr>
+				<tr>
+				 <td>order_shipping_addressid_fkey</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/order.html'>order</a><span>.shipping_addressid</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>			 
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/address.html'>address</a><span>.id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -168,28 +190,6 @@
 				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
 				</tr>
 				<tr>
-				 <td>order_shippingaddressid_fkey</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/order.html'>order</a><span>.shippingaddressid</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>			 
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/address.html'>address</a><span>.id</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>	
-				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-				</tr>
-				<tr>
 				 <td>trousers_id_fkey</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
@@ -212,12 +212,12 @@
 				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
 				</tr>
 				<tr>
-				 <td>order_positions_articleid_fkey</td>
+				 <td>order_positions_article_id_fkey</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/order_positions.html'>order_positions</a><span>.articleid</span>
+						<a href='tables/order_positions.html'>order_positions</a><span>.article_id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -261,7 +261,7 @@
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/products.html'>products</a><span>.labelid</span>
+						<a href='tables/products.html'>products</a><span>.label_id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -271,6 +271,28 @@
 				   <tr>
 					<td>
 						<a href='tables/labels.html'>labels</a><span>.id</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>	
+				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+				</tr>
+				<tr>
+				 <td>customer_address_fkey</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/customer.html'>customer</a><span>.currentaddressid</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>			 
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/address.html'>address</a><span>.id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -322,34 +344,12 @@
 				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
 				</tr>
 				<tr>
-				 <td>customer_address_fkey</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/customer.html'>customer</a><span>.currentaddressid</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>			 
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/address.html'>address</a><span>.id</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>	
-				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-				</tr>
-				<tr>
 				 <td>articles_products_fkey</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/articles.html'>articles</a><span>.productid</span>
+						<a href='tables/articles.html'>articles</a><span>.product_id</span>
 					</td>
 				   </tr>
 				  </table>				 
