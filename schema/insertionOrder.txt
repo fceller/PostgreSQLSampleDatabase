@@ -1,0 +1,13 @@
+addresses
+brands
+customers
+products
+articles
+orders
+clothes
+stocks
+trousers
+customer_product_rating
+order_positions
+colors
+sizes
