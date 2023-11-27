@@ -249,7 +249,6 @@ ALTER SEQUENCE webshop.brands_id_seq OWNED BY webshop.brands.id;
 
 CREATE TABLE webshop.clothes (
     id integer NOT NULL,
-    brand text,
     color_id integer
 );
 
@@ -461,7 +460,6 @@ CREATE TABLE webshop.products (
     name text,
     brand_id integer,
     category public.category,
-    gender public.gender,
     is_active boolean,
     created timestamp with time zone DEFAULT now(),
     updated timestamp with time zone

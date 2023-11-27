@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: clothes; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.clothes (id, brand, color_id) FROM stdin;
+COPY webshop.clothes (id, color_id) FROM stdin;
 \.
 
 
