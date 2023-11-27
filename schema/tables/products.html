@@ -177,7 +177,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="label_id">label_id</span></td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="brand_id">brand_id</span></td>
 				 <td>int4</td>
 				 <td>10</td>
 				 <td title='nullable'>√</td>
@@ -190,11 +190,11 @@
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
-					<td title="products.label_id references labels.id via product_labels_fkey">
-						<a href='labels.html'>labels</a><span class='relatedKey'>.id</span>
+					<td title="products.brand_id references brands.id via product_brands_fkey">
+						<a href='brands.html'>brands</a><span class='relatedKey'>.id</span>
 					</td>
 					<td class="constraint detail">
-						product_labels_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
+						product_brands_fkey <span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span>
 					</td>
 				   </tr>
 				  </table>					 
@@ -349,7 +349,7 @@
 					<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
 <area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="629,5,833,152">
 <area shape="rect" id="node2" href="products.html" title="products" alt="" coords="213,113,540,417">
-<area shape="rect" id="node4" href="labels.html" title="labels" alt="" coords="5,175,169,292">
+<area shape="rect" id="node4" href="brands.html" title="brands" alt="" coords="5,175,169,292">
 <area shape="rect" id="node3" href="customer_product_rating.html" title="customer_product_rating" alt="" coords="584,169,877,316">
 </map>
 
@@ -359,7 +359,7 @@
 					<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
 <area shape="rect" id="node1" href="articles.html" title="articles" alt="" coords="629,169,833,316">
 <area shape="rect" id="node2" href="products.html" title="products" alt="" coords="213,155,540,459">
-<area shape="rect" id="node7" href="labels.html" title="labels" alt="" coords="5,216,169,333">
+<area shape="rect" id="node7" href="brands.html" title="brands" alt="" coords="5,216,169,333">
 <area shape="rect" id="node3" href="cloth.html" title="cloth" alt="" coords="963,13,1095,101">
 <area shape="rect" id="node4" href="customer_product_rating.html" title="customer_product_rating" alt="" coords="584,5,877,152">
 <area shape="rect" id="node5" href="customer.html" title="customer" alt="" coords="287,8,467,96">

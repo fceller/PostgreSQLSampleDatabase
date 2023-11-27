@@ -201,6 +201,49 @@ ALTER SEQUENCE webshop.articles_id_seq OWNED BY webshop.articles.id;
 
 
 --
+-- Name: brands; Type: TABLE; Schema: webshop; Owner: postgres
+--
+
+CREATE TABLE webshop.brands (
+    id integer NOT NULL,
+    name text,
+    slug text,
+    icon bytea
+);
+
+
+ALTER TABLE webshop.brands OWNER TO postgres;
+
+--
+-- Name: TABLE brands; Type: COMMENT; Schema: webshop; Owner: postgres
+--
+
+COMMENT ON TABLE webshop.brands IS 'Brands / brands';
+
+
+--
+-- Name: brands_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
+--
+
+CREATE SEQUENCE webshop.brands_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE webshop.brands_id_seq OWNER TO postgres;
+
+--
+-- Name: brands_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
+--
+
+ALTER SEQUENCE webshop.brands_id_seq OWNED BY webshop.brands.id;
+
+
+--
 -- Name: cloth; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
@@ -317,49 +360,6 @@ CREATE TABLE webshop.customer_product_rating (
 ALTER TABLE webshop.customer_product_rating OWNER TO postgres;
 
 --
--- Name: labels; Type: TABLE; Schema: webshop; Owner: postgres
---
-
-CREATE TABLE webshop.labels (
-    id integer NOT NULL,
-    name text,
-    slug text,
-    icon bytea
-);
-
-
-ALTER TABLE webshop.labels OWNER TO postgres;
-
---
--- Name: TABLE labels; Type: COMMENT; Schema: webshop; Owner: postgres
---
-
-COMMENT ON TABLE webshop.labels IS 'Brands / labels';
-
-
---
--- Name: labels_id_seq; Type: SEQUENCE; Schema: webshop; Owner: postgres
---
-
-CREATE SEQUENCE webshop.labels_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE webshop.labels_id_seq OWNER TO postgres;
-
---
--- Name: labels_id_seq; Type: SEQUENCE OWNED BY; Schema: webshop; Owner: postgres
---
-
-ALTER SEQUENCE webshop.labels_id_seq OWNED BY webshop.labels.id;
-
-
---
 -- Name: order; Type: TABLE; Schema: webshop; Owner: postgres
 --
 
@@ -459,7 +459,7 @@ ALTER SEQUENCE webshop.order_positions_id_seq OWNED BY webshop.order_positions.i
 CREATE TABLE webshop.products (
     id integer NOT NULL,
     name text,
-    label_id integer,
+    brand_id integer,
     category public.category,
     gender public.gender,
     is_active boolean,
@@ -617,6 +617,13 @@ ALTER TABLE ONLY webshop.articles ALTER COLUMN id SET DEFAULT nextval('webshop.a
 
 
 --
+-- Name: brands id; Type: DEFAULT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.brands ALTER COLUMN id SET DEFAULT nextval('webshop.brands_id_seq'::regclass);
+
+
+--
 -- Name: colors id; Type: DEFAULT; Schema: webshop; Owner: postgres
 --
 
@@ -628,13 +635,6 @@ ALTER TABLE ONLY webshop.colors ALTER COLUMN id SET DEFAULT nextval('webshop.col
 --
 
 ALTER TABLE ONLY webshop.customer ALTER COLUMN id SET DEFAULT nextval('webshop.customer_id_seq1'::regclass);
-
-
---
--- Name: labels id; Type: DEFAULT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.labels ALTER COLUMN id SET DEFAULT nextval('webshop.labels_id_seq'::regclass);
 
 
 --
@@ -689,6 +689,14 @@ ALTER TABLE ONLY webshop.articles
 
 
 --
+-- Name: brands brands_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
+--
+
+ALTER TABLE ONLY webshop.brands
+    ADD CONSTRAINT brands_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: cloth cloth_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
@@ -718,14 +726,6 @@ ALTER TABLE ONLY webshop.customer
 
 ALTER TABLE ONLY webshop.customer_product_rating
     ADD CONSTRAINT customer_product_rating_pkey PRIMARY KEY (customer_id, product_id);
-
-
---
--- Name: labels labels_pkey; Type: CONSTRAINT; Schema: webshop; Owner: postgres
---
-
-ALTER TABLE ONLY webshop.labels
-    ADD CONSTRAINT labels_pkey PRIMARY KEY (id);
 
 
 --
@@ -849,11 +849,11 @@ ALTER TABLE ONLY webshop."order"
 
 
 --
--- Name: products product_labels_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
+-- Name: products product_brands_fkey; Type: FK CONSTRAINT; Schema: webshop; Owner: postgres
 --
 
 ALTER TABLE ONLY webshop.products
-    ADD CONSTRAINT product_labels_fkey FOREIGN KEY (label_id) REFERENCES webshop.labels(id);
+    ADD CONSTRAINT product_brands_fkey FOREIGN KEY (brand_id) REFERENCES webshop.brands(id);
 
 
 --

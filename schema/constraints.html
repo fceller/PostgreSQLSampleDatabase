@@ -256,12 +256,12 @@
 				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
 				</tr>
 				<tr>
-				 <td>product_labels_fkey</td>
+				 <td>product_brands_fkey</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/products.html'>products</a><span>.label_id</span>
+						<a href='tables/products.html'>products</a><span>.brand_id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -270,7 +270,29 @@
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				   <tr>
 					<td>
-						<a href='tables/labels.html'>labels</a><span>.id</span>
+						<a href='tables/brands.html'>brands</a><span>.id</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>	
+				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
+				</tr>
+				<tr>
+				 <td>customer_address_fkey</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/customer.html'>customer</a><span>.current_address_id</span>
+					</td>
+				   </tr>
+				  </table>				 
+				 </td>			 
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td>
+						<a href='tables/address.html'>address</a><span>.id</span>
 					</td>
 				   </tr>
 				  </table>				 
@@ -315,28 +337,6 @@
 				   <tr>
 					<td>
 						<a href='tables/products.html'>products</a><span>.id</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>	
-				 <td><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>Restrict delete</span></td>
-				</tr>
-				<tr>
-				 <td>customer_address_fkey</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/customer.html'>customer</a><span>.current_address_id</span>
-					</td>
-				   </tr>
-				  </table>				 
-				 </td>			 
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td>
-						<a href='tables/address.html'>address</a><span>.id</span>
 					</td>
 				   </tr>
 				  </table>				 

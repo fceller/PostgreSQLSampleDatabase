@@ -1613,6 +1613,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 2382	140	68554930	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 2383	140	3799423	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 2384	140	94449865	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
+3038	180	76669922	The stylish Suit Camenis just what you need right now!	$62.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 2385	140	3743062	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 2386	140	39257818	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 2387	140	76473083	The stylish Lipbalm Ankanais just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
@@ -2266,7 +2267,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 3035	179	90748724	The stylish Jacket Gorreis just what you need right now!	$146.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3036	179	60607252	The stylish Jacket Gorreis just what you need right now!	$146.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3037	179	29618129	The stylish Jacket Gorreis just what you need right now!	$146.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
-3038	180	76669922	The stylish Suit Camenis just what you need right now!	$62.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3039	180	81460434	The stylish Suit Camenis just what you need right now!	$62.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3040	180	83996089	The stylish Suit Camenis just what you need right now!	$62.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3041	180	78788865	The stylish Suit Camenis just what you need right now!	$62.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
@@ -2875,6 +2875,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 3644	215	32610957	The stylish Hoodie Durrantis just what you need right now!	$53.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3645	215	60526893	The stylish Hoodie Durrantis just what you need right now!	$53.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3646	215	85649782	The stylish Hoodie Durrantis just what you need right now!	$53.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
+3703	219	54854671	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3647	215	61282156	The stylish Hoodie Durrantis just what you need right now!	$53.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3648	216	89737072	The stylish Boxer Arnhildis just what you need right now!	$83.00	$76.36	19.0	8	t	2018-08-02 12:48:58.471454+02	\N
 3649	216	12879329	The stylish Boxer Arnhildis just what you need right now!	$83.00	$76.36	19.0	8	t	2018-08-02 12:48:58.471454+02	\N
@@ -2931,7 +2932,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 3700	219	83652369	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3701	219	86133581	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3702	219	59714167	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
-3703	219	54854671	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3704	219	17817744	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3705	219	24558087	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 3706	219	22045208	The stylish Ring Hagaris just what you need right now!	$131.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
@@ -4603,6 +4603,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 5372	315	76881974	The stylish Skirt Yokois just what you need right now!	$123.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5373	316	44562100	The stylish Sandals Andiamois just what you need right now!	$129.00	$86.43	19.0	33	t	2018-08-02 12:48:58.471454+02	\N
 5374	316	75571870	The stylish Sandals Andiamois just what you need right now!	$129.00	$86.43	19.0	33	t	2018-08-02 12:48:58.471454+02	\N
+5592	328	64903855	The stylish Pants Aminis just what you need right now!	$134.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5375	316	1945002	The stylish Sandals Andiamois just what you need right now!	$129.00	$86.43	19.0	33	t	2018-08-02 12:48:58.471454+02	\N
 5376	316	68305949	The stylish Sandals Andiamois just what you need right now!	$129.00	$86.43	19.0	33	t	2018-08-02 12:48:58.471454+02	\N
 5377	316	71955998	The stylish Sandals Andiamois just what you need right now!	$129.00	$86.43	19.0	33	t	2018-08-02 12:48:58.471454+02	\N
@@ -4820,7 +4821,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 5589	328	29715928	The stylish Pants Aminis just what you need right now!	$134.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5590	328	11509795	The stylish Pants Aminis just what you need right now!	$134.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5591	328	44948747	The stylish Pants Aminis just what you need right now!	$134.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
-5592	328	64903855	The stylish Pants Aminis just what you need right now!	$134.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5593	329	12879845	The stylish Necklace Corsaris just what you need right now!	$105.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5594	329	81690621	The stylish Necklace Corsaris just what you need right now!	$105.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
 5595	329	31822123	The stylish Necklace Corsaris just what you need right now!	$105.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
@@ -5274,6 +5274,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 6043	353	60815557	The stylish Hair Gel Camenis just what you need right now!	$134.00	$80.40	19.0	40	t	2018-08-02 12:48:58.471454+02	\N
 6044	353	13299126	The stylish Hair Gel Camenis just what you need right now!	$134.00	$80.40	19.0	40	t	2018-08-02 12:48:58.471454+02	\N
 6045	353	34287646	The stylish Hair Gel Camenis just what you need right now!	$134.00	$80.40	19.0	40	t	2018-08-02 12:48:58.471454+02	\N
+6212	363	24697383	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6046	353	9849153	The stylish Hair Gel Camenis just what you need right now!	$134.00	$80.40	19.0	40	t	2018-08-02 12:48:58.471454+02	\N
 6047	353	56347413	The stylish Hair Gel Camenis just what you need right now!	$134.00	$80.40	19.0	40	t	2018-08-02 12:48:58.471454+02	\N
 6048	354	51512780	The stylish Polo Escudois just what you need right now!	$60.00	\N	19.0	\N	t	2018-08-02 12:48:58.471454+02	\N
@@ -5440,7 +5441,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 6209	363	33462903	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6210	363	53452240	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6211	363	66401891	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-6212	363	24697383	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6213	363	98425439	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6214	363	27232856	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 6215	363	29597455	The stylish Bra Feivelis just what you need right now!	$77.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -6738,6 +6738,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 7507	436	15036000	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7508	436	63081095	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7509	436	22000771	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
+9690	561	10947728	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7510	436	63822218	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7511	436	4898595	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7512	436	62348772	The stylish Winter & Rain Boots Herryis just what you need right now!	$135.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -7224,6 +7225,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 7993	465	12513260	The stylish T-Shirt Marisais just what you need right now!	$112.00	$73.92	19.0	34	t	2018-08-02 12:49:10.991437+02	\N
 7994	465	70743492	The stylish T-Shirt Marisais just what you need right now!	$112.00	$73.92	19.0	34	t	2018-08-02 12:49:10.991437+02	\N
 7995	465	35850662	The stylish T-Shirt Marisais just what you need right now!	$112.00	$73.92	19.0	34	t	2018-08-02 12:49:10.991437+02	\N
+9691	561	36380555	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 7996	465	2971608	The stylish T-Shirt Marisais just what you need right now!	$112.00	$73.92	19.0	34	t	2018-08-02 12:49:10.991437+02	\N
 7997	465	53587016	The stylish T-Shirt Marisais just what you need right now!	$112.00	$73.92	19.0	34	t	2018-08-02 12:49:10.991437+02	\N
 7998	466	95922224	The stylish Lipbalm Ylais just what you need right now!	$76.00	$65.36	19.0	14	t	2018-08-02 12:49:10.991437+02	\N
@@ -7668,6 +7670,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 8437	487	86131872	The stylish Sleepwear Betzyis just what you need right now!	$54.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 8438	488	14322613	The stylish Winter & Rain Boots Madameis just what you need right now!	$54.00	$32.40	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
 8439	488	24090280	The stylish Winter & Rain Boots Madameis just what you need right now!	$54.00	$32.40	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
+9692	561	73861602	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 8440	488	98859549	The stylish Winter & Rain Boots Madameis just what you need right now!	$54.00	$32.40	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
 8441	488	62018568	The stylish Winter & Rain Boots Madameis just what you need right now!	$54.00	$32.40	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
 8442	488	11270091	The stylish Winter & Rain Boots Madameis just what you need right now!	$54.00	$32.40	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
@@ -7772,6 +7775,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 8541	493	79516224	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
 8542	493	99172660	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
 8543	493	90454141	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
+9693	561	86747787	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 8544	493	71288331	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
 8545	493	76954152	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
 8546	493	40626548	The stylish Suitcase Aminis just what you need right now!	$98.00	$68.60	19.0	30	t	2018-08-02 12:49:10.991437+02	\N
@@ -8376,6 +8380,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 9145	529	89942120	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
 9146	529	31702639	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
 9147	529	48761477	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
+9694	561	2408311	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9148	529	67105781	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
 9149	529	95443750	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
 9150	529	12316031	The stylish Slippers Fabianis just what you need right now!	$92.00	$91.08	19.0	1	t	2018-08-02 12:49:10.991437+02	\N
@@ -8918,11 +8923,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 9687	561	50577817	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9688	561	21413355	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9689	561	87242963	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-9690	561	10947728	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-9691	561	36380555	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-9692	561	73861602	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-9693	561	86747787	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-9694	561	2408311	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9695	561	20835753	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9696	561	91567206	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9697	561	5300805	The stylish Heels Elfyis just what you need right now!	$147.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -8980,6 +8980,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 9749	564	40425097	The stylish Athletic Shoes Pankais just what you need right now!	$133.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9750	564	16849898	The stylish Athletic Shoes Pankais just what you need right now!	$133.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9751	564	65762250	The stylish Athletic Shoes Pankais just what you need right now!	$133.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
+10083	579	40737958	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9752	564	27155493	The stylish Athletic Shoes Pankais just what you need right now!	$133.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9753	565	60446125	The stylish Wrap Gorreis just what you need right now!	$107.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 9754	565	94606423	The stylish Wrap Gorreis just what you need right now!	$107.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -9311,7 +9312,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 10080	579	22992013	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10081	579	89241205	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10082	579	75309310	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-10083	579	40737958	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10084	579	34418481	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10085	579	9610636	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10086	579	44919212	The stylish Bra Drenkis just what you need right now!	$106.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -9964,6 +9964,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 10733	611	52034793	The stylish Dress Shoes Trickis just what you need right now!	$117.00	$87.75	19.0	25	t	2018-08-02 12:49:10.991437+02	\N
 10734	611	82978093	The stylish Dress Shoes Trickis just what you need right now!	$117.00	$87.75	19.0	25	t	2018-08-02 12:49:10.991437+02	\N
 10735	611	73578480	The stylish Dress Shoes Trickis just what you need right now!	$117.00	$87.75	19.0	25	t	2018-08-02 12:49:10.991437+02	\N
+10905	620	75760121	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10736	611	48756324	The stylish Dress Shoes Trickis just what you need right now!	$117.00	$87.75	19.0	25	t	2018-08-02 12:49:10.991437+02	\N
 10737	611	20168998	The stylish Dress Shoes Trickis just what you need right now!	$117.00	$87.75	19.0	25	t	2018-08-02 12:49:10.991437+02	\N
 10738	612	78776973	The stylish Capris Arnhildis just what you need right now!	$55.00	$33.00	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
@@ -10133,7 +10134,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 10902	620	77695988	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10903	620	61321639	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10904	620	90522717	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
-10905	620	75760121	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10906	620	88239764	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10907	620	65314086	The stylish Bra Trickis just what you need right now!	$114.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 10908	621	60797260	The stylish Boots Flavkois just what you need right now!	$96.00	$57.60	19.0	40	t	2018-08-02 12:49:10.991437+02	\N
@@ -10461,6 +10461,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 11230	640	67158304	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 11231	640	67444856	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 11232	640	3266173	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
+11851	670	99950754	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11233	640	80308962	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 11234	640	11537327	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
 11235	640	64203740	The stylish Winter & Rain Boots Kiffis just what you need right now!	$86.00	\N	19.0	\N	t	2018-08-02 12:49:10.991437+02	\N
@@ -11079,7 +11080,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 11848	670	36142004	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11849	670	27028764	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11850	670	42236195	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-11851	670	99950754	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11852	670	88206693	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11853	670	26611272	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 11854	670	15960208	The stylish Scarf Nadyis just what you need right now!	$142.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
@@ -11676,6 +11676,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 12444	705	32253270	The stylish Espadrilles Pepperis just what you need right now!	$61.00	$36.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 12445	705	35830530	The stylish Espadrilles Pepperis just what you need right now!	$61.00	$36.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 12446	705	99004298	The stylish Espadrilles Pepperis just what you need right now!	$61.00	$36.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
+14302	808	11181024	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 12447	705	11414946	The stylish Espadrilles Pepperis just what you need right now!	$61.00	$36.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 12448	706	55981089	The stylish Nailpolish Cyliasis just what you need right now!	$86.00	$51.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 12449	706	8437325	The stylish Nailpolish Cyliasis just what you need right now!	$86.00	$51.60	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
@@ -12322,6 +12323,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13091	742	36697872	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13092	742	66880953	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13093	742	35409277	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
+14303	808	25527342	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13094	742	37403760	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13095	742	95069229	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13096	742	92267517	The stylish Hoodie Marisais just what you need right now!	$79.00	$47.40	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
@@ -12378,6 +12380,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13147	745	49314279	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
 13148	745	14104818	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
 13149	745	39770657	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
+14304	808	17020603	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13150	745	11079629	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
 13151	745	55649685	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
 13152	745	52156572	The stylish Booties Escudois just what you need right now!	$60.00	$39.00	19.0	35	t	2018-08-02 12:49:15.728196+02	\N
@@ -12760,6 +12763,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13529	766	57728868	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13530	766	13294065	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13531	766	54702539	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
+14305	808	74490052	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13532	766	38296354	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13533	766	64669321	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13534	766	90242394	The stylish Skirt Bienchenis just what you need right now!	$73.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
@@ -12926,6 +12930,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13695	775	26235854	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
 13696	775	34713837	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
 13697	775	24119094	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
+14306	808	21341620	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13698	775	29740531	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
 13699	775	61071259	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
 13700	775	85304650	The stylish Scarf Feivelis just what you need right now!	$139.00	$115.37	19.0	17	t	2018-08-02 12:49:15.728196+02	\N
@@ -13035,6 +13040,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13804	780	22536570	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
 13805	780	32037083	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
 13806	780	66543499	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
+14307	808	50801766	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13807	780	39219867	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
 13808	780	42178057	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
 13809	780	16636381	The stylish Flip-Flops Cuciois just what you need right now!	$51.00	$32.13	19.0	37	t	2018-08-02 12:49:15.728196+02	\N
@@ -13146,6 +13152,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 13915	786	76333658	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13916	786	78285156	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13917	786	13802961	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
+15351	865	30866766	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 13918	786	78161103	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13919	786	59426492	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
 13920	786	11900656	The stylish Pants Chrisieis just what you need right now!	$65.00	$39.00	19.0	40	t	2018-08-02 12:49:15.728196+02	\N
@@ -13530,12 +13537,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 14299	808	62602115	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 14300	808	39189252	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 14301	808	20111030	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14302	808	11181024	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14303	808	25527342	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14304	808	17020603	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14305	808	74490052	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14306	808	21341620	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-14307	808	50801766	The stylish Boxer Buckis just what you need right now!	$64.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 14308	809	14787969	The stylish Dress Ayleenis just what you need right now!	$89.00	$66.75	19.0	25	t	2018-08-02 12:49:15.728196+02	\N
 14309	809	8320158	The stylish Dress Ayleenis just what you need right now!	$89.00	$66.75	19.0	25	t	2018-08-02 12:49:15.728196+02	\N
 14310	809	89116727	The stylish Dress Ayleenis just what you need right now!	$89.00	$66.75	19.0	25	t	2018-08-02 12:49:15.728196+02	\N
@@ -14579,7 +14580,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 15348	865	91057197	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15349	865	98461050	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15350	865	60868001	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-15351	865	30866766	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15352	865	16749168	The stylish Ring Bindais just what you need right now!	$56.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15353	866	84591504	The stylish Eye Makeup Kiffis just what you need right now!	$129.00	$103.20	19.0	20	t	2018-08-02 12:49:15.728196+02	\N
 15354	866	34249232	The stylish Eye Makeup Kiffis just what you need right now!	$129.00	$103.20	19.0	20	t	2018-08-02 12:49:15.728196+02	\N
@@ -14686,6 +14686,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 15455	871	28192780	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15456	871	3487106	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15457	871	11082235	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
+16342	924	90096946	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15458	871	4584163	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15459	871	70150503	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15460	871	25329311	The stylish Gym Bag Bastis just what you need right now!	$122.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
@@ -14739,6 +14740,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 15508	875	94886523	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
 15509	875	16092217	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
 15510	875	1144811	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
+16343	924	66726891	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 15511	875	33050982	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
 15512	875	37462384	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
 15513	875	62791011	The stylish Backpack Elfyis just what you need right now!	$119.00	$97.58	19.0	18	t	2018-08-02 12:49:15.728196+02	\N
@@ -15349,6 +15351,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 16118	912	3474273	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
 16119	912	70234755	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
 16120	912	39152157	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
+16344	924	60568432	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16121	912	85437039	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
 16122	912	9294900	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
 16123	912	93182597	The stylish Casual Shoes Herryis just what you need right now!	$99.00	$95.04	19.0	4	t	2018-08-02 12:49:15.728196+02	\N
@@ -15570,9 +15573,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 16339	924	674254	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16340	924	27069639	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16341	924	66442909	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-16342	924	90096946	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-16343	924	66726891	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
-16344	924	60568432	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16345	924	34598347	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16346	924	79369852	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
 16347	924	63333867	The stylish Ring Cuciois just what you need right now!	$61.00	\N	19.0	\N	t	2018-08-02 12:49:15.728196+02	\N
@@ -16387,6 +16387,7 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 17156	971	98756633	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
 17157	971	82155822	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
 17158	971	3316705	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
+17603	996	1110910	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17159	971	77210536	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
 17160	971	98191245	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
 17161	971	18406934	The stylish Shorts Enneis just what you need right now!	$94.00	$83.66	19.0	11	t	2018-08-02 12:49:30.656356+02	\N
@@ -16831,7 +16832,6 @@ COPY webshop.articles (id, product_id, ean, description, original_price, reduced
 17600	996	77360874	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17601	996	67852501	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17602	996	6366677	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
-17603	996	1110910	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17604	996	71047328	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17605	996	13915185	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N
 17606	996	18178774	The stylish Polo Trickis just what you need right now!	$143.00	\N	19.0	\N	t	2018-08-02 12:49:30.656356+02	\N

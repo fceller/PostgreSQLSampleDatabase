@@ -17,10 +17,10 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: labels; Type: TABLE DATA; Schema: webshop; Owner: postgres
+-- Data for Name: brands; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.labels (id, name, slug, icon) FROM stdin;
+COPY webshop.brands (id, name, slug, icon) FROM stdin;
 1	A	A	\N
 2	A.F.C.A	AFCA	\N
 3	A.P.C.Absolut Joy	APCAbsolutJoy	\N
@@ -1195,10 +1195,10 @@ COPY webshop.labels (id, name, slug, icon) FROM stdin;
 
 
 --
--- Name: labels_id_seq; Type: SEQUENCE SET; Schema: webshop; Owner: postgres
+-- Name: brands_id_seq; Type: SEQUENCE SET; Schema: webshop; Owner: postgres
 --
 
-SELECT pg_catalog.setval('webshop.labels_id_seq', 1170, true);
+SELECT pg_catalog.setval('webshop.brands_id_seq', 1170, true);
 
 
 --

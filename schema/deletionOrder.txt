@@ -9,5 +9,5 @@ order
 articles
 products
 customer
-labels
+brands
 address

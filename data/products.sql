@@ -20,7 +20,7 @@ SET row_security = off;
 -- Data for Name: products; Type: TABLE DATA; Schema: webshop; Owner: postgres
 --
 
-COPY webshop.products (id, name, label_id, category, gender, is_active, created, updated) FROM stdin;
+COPY webshop.products (id, name, brand_id, category, gender, is_active, created, updated) FROM stdin;
 50	Costume Amin	1152	Traditional	unisex	t	2018-08-02 11:56:54.199683+02	\N
 51	Athletic Shoes Trick	38	Footwear	male	t	2018-08-02 12:44:07.671648+02	\N
 52	Socks Cylias	680	Apparel	unisex	t	2018-08-02 12:48:48.224576+02	\N
